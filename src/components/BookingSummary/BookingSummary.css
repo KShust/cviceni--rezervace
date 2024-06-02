@@ -1,0 +1,99 @@
+.summary {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #e5e5f5;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary h2 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.summary__head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.summary__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.summary__head-property {
+  flex: 1;
+}
+
+.summary__head-room {
+  margin-left: 20px;
+}
+
+.summary__name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.summary__adress,
+.summary__city,
+.summary__rating {
+  font-size: 14px;
+  color: #666;
+}
+
+.summary__room-type,
+.summary__room-price {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.summary__detail,
+.summary__services,
+.summary__cancal {
+  margin-bottom: 20px;
+}
+
+.summary__detail h3,
+.summary__services h3,
+.summary__cancal h3 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.summary__number,
+.summary__dates,
+.summary__guests,
+.summary__services,
+.summary__room-total {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.summary__check-in,
+.summary__check-out {
+  font-size: 18px;
+  font-weight: 600;
+  color: #060606;
+  margin-bottom: 10px;
+}
+
+.summary__service {
+  margin-bottom: 10px;
+}
+
+.summary__cancel-text p {
+  margin-bottom: 10px;
+}
+
+.summary__cancal {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
