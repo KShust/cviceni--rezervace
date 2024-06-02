@@ -1,8 +1,8 @@
 import "../BookingSummary/BookingSummary.css"
-import { Header } from "../Header/header";
+import { Header } from "../Header/Header";
 import { Detail } from "../DetailObjednavky/Detail"
-import { Services } from "../Services/services";
-import { Cancel } from "../Cancel/cancel";
+import { Services } from "../Services/Services";
+import { Cancel } from "../Cancel/Cancel";
 
 const bookingData = {
   hotel: {
@@ -29,6 +29,7 @@ const bookingData = {
       children: 1,
     },
     services: {
+      breakfast: 150,
       food: false,
       parking: 200,
       wifi: 'Zdarma na všech pokojích',
@@ -44,11 +45,15 @@ export const BookingSummary = () => {
       <div className="summary">
         <h2>Booking Summary</h2>
         <Header name={bookingData.hotel.name} adress={bookingData.hotel.address} 
-        city={bookingData.hotel.city} rating={bookingData.hotel.rating} roomname={bookingData.hotel.room.name}/>
+                city={bookingData.hotel.city} rating={bookingData.hotel.rating} roomname={bookingData.hotel.room.name}
+                roomtype={bookingData.hotel.room.type} roomprice={bookingData.hotel.room.price}
+                image={bookingData.hotel.image} />
         <Detail food={bookingData.booking.services.food} checkin={bookingData.booking.dates.checkIn}
-        checkout={bookingData.booking.dates.checkOut}/>
-        <Services parking={bookingData.booking.services.parking} 
-        wifi={bookingData.booking.services.wifi} wellness={bookingData.booking.services.wellness}/>
+                checkout={bookingData.booking.dates.checkOut} cislo={bookingData.booking.number} 
+                pobyt={bookingData.booking.dates.stay} dospeli={bookingData.booking.guests.adults}
+                deti={bookingData.booking.guests.children} total={bookingData.booking.total}/>
+        <Services parking={bookingData.booking.services.parking} snidane={bookingData.booking.services.breakfast}
+                wifi={bookingData.booking.services.wifi} wellness={bookingData.booking.services.wellness}/>
         <Cancel />
       </div>
     );

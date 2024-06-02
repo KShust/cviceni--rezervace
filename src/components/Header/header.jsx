@@ -3,7 +3,7 @@ export const Header = (props) => {
         <div className="summary__head">
             <img
             className="summary__photo"
-            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=960"
+            src={props.image}
             />
             <div className="summary__head-property">
             <h3 className="summary__name">{props.name}</h3>
@@ -13,10 +13,8 @@ export const Header = (props) => {
             </div>
             <div className="summary__head-room">
             <h3 className="summary__name">{props.roomname}</h3>
-            <div className="summary__room-type">
-                Dvoulůžkový s dětskou přistýlkou
-            </div>
-            <div className="summary__room-price">1 800 Kč / noc</div>
+            <div className="summary__room-type">{props.roomtype}</div>
+            <div className="summary__room-price">{props.roomprice} Kč / noc</div>
             </div>
         </div>
     )}
